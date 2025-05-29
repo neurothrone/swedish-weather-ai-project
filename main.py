@@ -26,7 +26,7 @@ for col, val in sweden.isnull().sum().items():
 sweden = sweden.dropna(subset=["tavg", "precipitation"])
 
 # 4. Check for extreme values (optional)
-print("Temperature range:", sweden["tavg"].min(), "to", sweden["tavg"].max())
+print("\nTemperature range:", sweden["tavg"].min(), "to", sweden["tavg"].max())
 print("Precipitation range:", sweden["precipitation"].min(), "to", sweden["precipitation"].max())
 
 # 5. Convert date to datetime and extract the day of the year
@@ -53,7 +53,7 @@ y_pred = model.predict(X_test)
 # 11. Results for Linear regression
 mse = mean_squared_error(y_test, y_pred)
 r2 = r2_score(y_test, y_pred)
-print(f"Linear regression - Mean Squared Error: {mse:.2f}")
+print(f"\nLinear regression - Mean Squared Error: {mse:.2f}")
 print(f"Linear regression - R^2 Score: {r2:.2f}")
 
 # 12. Simple plot: Actual vs Predicted
